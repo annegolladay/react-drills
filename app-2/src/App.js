@@ -23,4 +23,23 @@ function App() {
   );
 }
 
+
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      fruit: ["apple", "peach", "watermelon", "banana"]
+    };
+  }
+
+  render() {
+    let fruitArr = this.state.fruit.map((element, index) => {
+      return <h2 key={index}>{element}</h2>;
+    });
+
+    return <div className="App">{fruitArr}</div>;
+  }
+}
+
 export default App;
